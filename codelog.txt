@@ -1,0 +1,60 @@
+Code Log
+
+6/17/2021
+------------------------------------
+
+Admin Module:
+
+1. Added PDF View for view_agreement.php
+2. Added Create and Read for view_unit.php
+3. Added Temporary validation in view_unit.php
+4. Added New folder called functions for all backend files
+5. Added connection.php for the database connection
+6. Added unitFunc.php for all unit functionalities
+7. Added Branch Side Navigation Menu
+8. Added Create and Read for view_branch.php
+9. Added Temporary validation in view_branch.php
+10. Added branchFunc.php for all branch functionalities
+11. Added Create and Read for view_employee.php
+12. Added Temporary validation in view_employee.php
+13. Added employeeFunc.php for all employee functionalities
+14. Added footer.php for all javascript files
+15. Added profile.php, notification.php 
+16. Added notification functionality
+17. Added login functionality for admin
+
+Employee Module:
+
+1. Added login functioanloty for employee
+2. Added notification functionality
+3. Added Create and Read for view_unit.php
+
+
+Renter Module: 
+
+1. Added PDF Viewer for view_agreement.php
+2. Added notification functioanlity
+3. Added login functionality for renter
+
+
+6/18/2021
+------------------------------------
+
+
+// All library, plugins, ui template use.
+
+1. Magestic Admin 
+2. PdfObjectJS
+3. Hint.css
+
+
+Questions for the system
+
+1. Does the employee need to register or si admin ra mo himog account para sa employee? 
+2. Ngano naay add renter ang admin na naa may employee account para mag manage sa mga renters? 
+3. Ngano ang admin kay maka add og unit na naay may employee account para mag add? 
+
+
+shortcut links:
+
+https://www.bootstrapdash.com/demo/majestic-free/template/pages/icons/mdi.html
