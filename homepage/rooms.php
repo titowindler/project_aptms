@@ -5,10 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+      <!--   
+  // replace this local version
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+ 
  
     <link rel="stylesheet" href="css/animate.css">
     
@@ -49,13 +52,11 @@
 	        <span class="fa fa-bars"></span> Menu
 	      </button>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	        	<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-	        	<li class="nav-item"><a href="rooms.html" class="nav-link">Apartment Room</a></li>
-	          <li class="nav-item active"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	         <ul class="navbar-nav ml-auto">
+	        	<li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+	        	<li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+	        	<li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="../login.php" class="nav-link">Login</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -67,125 +68,133 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-          	<p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>Blog <i class="fa fa-chevron-right"></i></span></p>
-            <h1 class="mb-0 bread">Blog</h1>
+          	<p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home <i class="fa fa-chevron-right"></i></a></span> <span>Rooms <i class="fa fa-chevron-right"></i></span></p>
+            <h1 class="mb-0 bread">Apartment Room</h1>
           </div>
         </div>
       </div>
     </section>
    
-    <section class="ftco-section bg-light">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20 rounded" style="background-image: url('images/image_1.jpg');">
-              </a>
-              <div class="text p-4 text-center">
-                <h3 class="heading"><a href="#">Work Hard, Party Hard in a Luxury Chalet in the Alps</a></h3>
-                <div class="meta mb-2">
-                  <div><a href="#">January 30, 2020</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-                </div>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20 rounded" style="background-image: url('images/image_2.jpg');">
-              </a>
-              <div class="text p-4 text-center">
-                <h3 class="heading"><a href="#">Work Hard, Party Hard in a Luxury Chalet in the Alps</a></h3>
-                <div class="meta mb-2">
-                  <div><a href="#">January 30, 2020</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-                </div>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20 rounded" style="background-image: url('images/image_3.jpg');">
-              </a>
-              <div class="text p-4 text-center">
-                <h3 class="heading"><a href="#">Work Hard, Party Hard in a Luxury Chalet in the Alps</a></h3>
-                <div class="meta mb-2">
-                  <div><a href="#">January 30, 2020</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-                </div>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-              </div>
-            </div>
-          </div>
+    <section class="ftco-section bg-light ftco-no-pt ftco-no-pb">
+			<div class="container-fluid px-md-0">
+				<div class="row no-gutters">
+    			<div class="col-lg-6">
+    				<div class="room-wrap d-md-flex">
+    					<a href="#" class="img" style="background-image: url(images/room-1.jpg);"></a>
+    					<div class="half left-arrow d-flex align-items-center">
+    						<div class="text p-4 p-xl-5 text-center">
+    							<p class="star mb-0"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
+    							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
+	    						<h3 class="mb-3"><a href="rooms.html">Suite Room</a></h3>
+	    						<ul class="list-accomodation">
+	    							<li><span>Max:</span> 3 Persons</li>
+	    							<li><span>Size:</span> 45 m2</li>
+	    							<li><span>View:</span> Sea View</li>
+	    							<li><span>Bed:</span> 1</li>
+	    						</ul>
+	    						<p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-lg-6">
+    				<div class="room-wrap d-md-flex">
+    					<a href="#" class="img" style="background-image: url(images/room-2.jpg);"></a>
+    					<div class="half left-arrow d-flex align-items-center">
+    						<div class="text p-4 p-xl-5 text-center">
+    							<p class="star mb-0"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
+    							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
+	    						<h3 class="mb-3"><a href="rooms.html">Standard Room</a></h3>
+									<ul class="list-accomodation">
+	    							<li><span>Max:</span> 3 Persons</li>
+	    							<li><span>Size:</span> 45 m2</li>
+	    							<li><span>View:</span> Sea View</li>
+	    							<li><span>Bed:</span> 1</li>
+	    						</ul>
+	    						<p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
 
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20 rounded" style="background-image: url('images/image_4.jpg');">
-              </a>
-              <div class="text p-4 text-center">
-                <h3 class="heading"><a href="#">Work Hard, Party Hard in a Luxury Chalet in the Alps</a></h3>
-                <div class="meta mb-2">
-                  <div><a href="#">January 30, 2020</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-                </div>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20 rounded" style="background-image: url('images/image_5.jpg');">
-              </a>
-              <div class="text p-4 text-center">
-                <h3 class="heading"><a href="#">Work Hard, Party Hard in a Luxury Chalet in the Alps</a></h3>
-                <div class="meta mb-2">
-                  <div><a href="#">January 30, 2020</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-                </div>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20 rounded" style="background-image: url('images/image_6.jpg');">
-              </a>
-              <div class="text p-4 text-center">
-                <h3 class="heading"><a href="#">Work Hard, Party Hard in a Luxury Chalet in the Alps</a></h3>
-                <div class="meta mb-2">
-                  <div><a href="#">January 30, 2020</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="fa fa-comment"></span> 3</a></div>
-                </div>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-5">
-          <div class="col text-center">
-            <div class="block-27">
-              <ul>
-                <li><a href="#">&lt;</a></li>
-                <li class="active"><span>1</span></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&gt;</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    			<div class="col-lg-6">
+    				<div class="room-wrap d-md-flex">
+    					<a href="#" class="img order-md-last" style="background-image: url(images/room-3.jpg);"></a>
+    					<div class="half right-arrow d-flex align-items-center">
+    						<div class="text p-4 p-xl-5 text-center">
+    							<p class="star mb-0"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
+    							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
+	    						<h3 class="mb-3"><a href="rooms.html">Family Room</a></h3>
+									<ul class="list-accomodation">
+	    							<li><span>Max:</span> 3 Persons</li>
+	    							<li><span>Size:</span> 45 m2</li>
+	    							<li><span>View:</span> Sea View</li>
+	    							<li><span>Bed:</span> 1</li>
+	    						</ul>
+	    						<p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-lg-6">
+    				<div class="room-wrap d-md-flex">
+    					<a href="#" class="img order-md-last" style="background-image: url(images/room-4.jpg);"></a>
+    					<div class="half right-arrow d-flex align-items-center">
+    						<div class="text p-4 p-xl-5 text-center">
+    							<p class="star mb-0"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
+    							<p class="mb-0"><span class="price mr-1">$120.00</span> <span class="per">per night</span></p>
+	    						<h3 class="mb-3"><a href="rooms.html">Deluxe Room</a></h3>
+									<ul class="list-accomodation">
+	    							<li><span>Max:</span> 3 Persons</li>
+	    							<li><span>Size:</span> 45 m2</li>
+	    							<li><span>View:</span> Sea View</li>
+	    							<li><span>Bed:</span> 1</li>
+	    						</ul>
+	    						<p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+
+    			<div class="col-lg-6">
+    				<div class="room-wrap d-md-flex">
+    					<a href="#" class="img" style="background-image: url(images/room-5.jpg);"></a>
+    					<div class="half left-arrow d-flex align-items-center">
+    						<div class="text p-4 p-xl-5 text-center">
+    							<p class="star mb-0"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
+	    						<h3 class="mb-3"><a href="rooms.html">Luxury Room</a></h3>
+									<ul class="list-accomodation">
+	    							<li><span>Max:</span> 3 Persons</li>
+	    							<li><span>Size:</span> 45 m2</li>
+	    							<li><span>View:</span> Sea View</li>
+	    							<li><span>Bed:</span> 1</li>
+	    						</ul>
+	    						<p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-lg-6">
+    				<div class="room-wrap d-md-flex">
+    					<a href="#" class="img" style="background-image: url(images/room-6.jpg);"></a>
+    					<div class="half left-arrow d-flex align-items-center">
+    						<div class="text p-4 p-xl-5 text-center">
+    							<p class="star mb-0"><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></p>
+	    						<h3 class="mb-3"><a href="rooms.html">Superior Room</a></h3>
+									<ul class="list-accomodation">
+	    							<li><span>Max:</span> 3 Persons</li>
+	    							<li><span>Size:</span> 45 m2</li>
+	    							<li><span>View:</span> Sea View</li>
+	    							<li><span>Bed:</span> 1</li>
+	    						</ul>
+	    						<p class="pt-1"><a href="room-single.html" class="btn-custom px-3 py-2">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+			</div>
+		</section>
 		
     <footer class="footer">
 			<div class="container">
