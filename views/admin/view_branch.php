@@ -65,10 +65,31 @@ $adminID = $_SESSION['admin_id'];
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
 
+          <li class="nav-item" style="pointer-events: none;">
+            <a class="nav-link">
+              <img src="../../images/faces/face10.jpg" alt="profile" style="width:30%;border-radius: 50%;margin:0 10px;padding:5px;">
+              <span class="nav-profile-name">Administrator</span>
+            </a>
+         
+          </li>
+
+          <li class="nav-item" style="pointer-events: none;">
+            <a class="nav-link">
+               <span class="menu-title" style="padding:0 50px;">Main Navigation</span>
+            </a>
+          </li>
+
           <li class="nav-item">
             <a class="nav-link" href="dashboard.php">
               <i class="mdi mdi-home menu-icon"></i>
               <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+
+           <li class="nav-item active">
+            <a class="nav-link" href="view_branch.php">
+              <i class="mdi mdi-library-plus menu-icon"></i>
+                <span class="menu-title">Branch</span>
             </a>
           </li>
 
@@ -80,6 +101,13 @@ $adminID = $_SESSION['admin_id'];
           </li>
 
            <li class="nav-item">
+            <a class="nav-link" href="view_employee.php">
+              <i class="mdi mdi-account-circle menu-icon"></i>
+                <span class="menu-title">Employees</span>
+            </a>
+          </li>
+
+           <li class="nav-item">
             <a class="nav-link" href="view_renter.php">
               <i class="mdi mdi-houzz menu-icon"></i>
                 <span class="menu-title">Renters</span>
@@ -87,52 +115,27 @@ $adminID = $_SESSION['admin_id'];
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="view_billing.php">
-              <i class="mdi mdi-cash-multiple menu-icon"></i>
-                <span class="menu-title">Billings</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="view_agreement.php">
-              <i class="mdi mdi-newspaper menu-icon"></i>
-                <span class="menu-title">Agreement</span>
+            <a class="nav-link" href="view_report.php">
+              <i class="mdi mdi-note-text menu-icon"></i>
+                <span class="menu-title">Report</span>
             </a>
           </li>
 
            <li class="nav-item">
-            <a class="nav-link" href="view_employee.php">
-              <i class="mdi mdi-account-circle menu-icon"></i>
-                <span class="menu-title">Employee</span>
+            <a class="nav-link" href="view_transaction.php">
+               <i class="mdi mdi-cash-multiple menu-icon"></i>
+                <span class="menu-title">Transaction</span>
             </a>
           </li>
 
-         <li class="nav-item active">
-            <a class="nav-link" href="view_branch.php">
-              <i class="mdi mdi-library-plus menu-icon"></i>
-                <span class="menu-title">Branch</span>
+           <li class="nav-item">
+            <a class="nav-link" href="view_complaints.php">
+               <i class="mdi mdi-newspaper menu-icon"></i>
+                <span class="menu-title">Complaints</span>
             </a>
           </li>
-         
-  
-        <!--    <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#report" aria-expanded="false" aria-controls="report">
-              <i class="mdi mdi-note-text menu-icon"></i>
-              <span class="menu-title">Report</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="report">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="view_tenant_report.html">Tenant Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_rental_report.html">Rental Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_complaint_report.html">Complaint Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_bill_report.html">Bill Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_unit_report.html">Unit Status Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_payment_report.html">Payment Report</a></li>
-              </ul>
-            </div>
-          </li> -->
 
+        </ul>
       </nav>
 
         <!-- partial -->
@@ -143,7 +146,7 @@ $adminID = $_SESSION['admin_id'];
               <div class="d-flex justify-content-between flex-wrap">
                 <div class="d-flex align-items-end flex-wrap">
                   <div class="d-flex">
-                    <i class="mdi mdi-houzz-box"></i>
+                    <i class="mdi mdi-library-plus menu-icon"></i>
                     <p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;Branch</p>
                     
                   </div>
@@ -166,8 +169,11 @@ $adminID = $_SESSION['admin_id'];
                     <table id="viewBranchList" class="table">
                       <thead>
                         <tr>
-                            <th>Branch ID</th>
-                            <th>Branch Name</th>
+                            <th>Branch</th>
+                            <th>Branch Address</th>
+                            <th>Branch Contact Number</th>
+                            <th>Status</th>
+                            <th>Action</th>
                             <!-- <th>Branch Details</th> -->
                             <!-- <th>Options</th> -->
                         </tr>
@@ -177,17 +183,19 @@ $adminID = $_SESSION['admin_id'];
                         <tr>
                           <td> <?php echo $row['branch_id']; ?> </td> 
                           <td> <?php echo $row['branch_name']; ?> </td>
-                          <!-- <td>
-                            <button type="button" class="btn btn-success btn-sm">
-                            VIEW </button> 
-                          </td> -->
+                          <td> <?php echo $row['branch_name']; ?> </td>
 
-                         <!--  <td>
-                            <button type="button" class="btn btn-primary btn-sm">
-                            UPDATE </button>
-                            <button type="button" class="btn btn-danger btn-sm">
-                            DELETE </button>
-                          </td> -->
+                          <td>
+                            <span class="badge badge-success">
+                            VIEW </span> 
+                          </td>
+
+                          <td>
+                             <button type="button" class="btn btn-danger btn-sm">
+                             Deactive </button>
+                             <button type="button" class="btn btn-primary btn-sm">
+                             Edit Branch </button>
+                          </td>
                         </tr>
                         <?php } ?>
                       </tbody>
@@ -218,6 +226,9 @@ $adminID = $_SESSION['admin_id'];
 <!-- Modal -->
 
 
+
+
+
 <!-- Add Branch Modal -->
 <div class="modal fade" id="addBranch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -234,9 +245,28 @@ $adminID = $_SESSION['admin_id'];
                      
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label class="col-form-label">Branch Name</label>
+                          <label class="col-form-label">Branch</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" placeholder="Enter Branch Name" name="branch_name" required>
+                            <input type="text" class="form-control" placeholder="Enter Branch" name="branch_name" required>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="col-form-label">Branch Address</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" placeholder="Enter Branch Address" name="branch_address" required>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="col-form-label">Branch Contact Number</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" placeholder="Enter Branch Contact Number" name="branch_cnum" required>
                           </div>
                         </div>
                       </div>
@@ -247,6 +277,7 @@ $adminID = $_SESSION['admin_id'];
                     <div class="row">
                       <div class="col-md-12">
                         <button type="submit" class="btn btn-primary mr-2 text-right" name="addBranch">Submit</button>
+                        <button type="button" class="btn btn-danger mr-2 text-right" data-dismiss="modal">Cancel</button>
                       </div>
                   </form>  
                 </div>

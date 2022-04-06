@@ -8,15 +8,15 @@ require('header.php');
 // connection to db
 require('../../functions/connection.php');
 
-// function for db connection
-$conn = connect();
+// // function for db connection
+// $conn = connect();
 
-// query for units ; change this for dashboard
-$sql = "SELECT * FROM units";
-$result = mysqli_query($conn,$sql);
+// // query for units ; change this for dashboard
+// $sql = "SELECT * FROM units";
+// $result = mysqli_query($conn,$sql);
 
-// session id for this account
-$employeeID = $_SESSION['employee_id'];
+// // session id for this account
+// $employeeID = $_SESSION['employee_id'];
 
 
 
@@ -67,10 +67,31 @@ $employeeID = $_SESSION['employee_id'];
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
 
+          <li class="nav-item" style="pointer-events: none;">
+            <a class="nav-link">
+              <img src="../../images/faces/face10.jpg" alt="profile" style="width:30%;border-radius: 50%;margin:0 10px;padding:5px;">
+              <span class="nav-profile-name">Administrator</span>
+            </a>
+         
+          </li>
+
+          <li class="nav-item" style="pointer-events: none;">
+            <a class="nav-link">
+               <span class="menu-title" style="padding:0 50px;">Main Navigation</span>
+            </a>
+          </li>
+
           <li class="nav-item">
             <a class="nav-link" href="dashboard.php">
               <i class="mdi mdi-home menu-icon"></i>
               <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+
+           <li class="nav-item">
+            <a class="nav-link" href="view_branch.php">
+              <i class="mdi mdi-library-plus menu-icon"></i>
+                <span class="menu-title">Branch</span>
             </a>
           </li>
 
@@ -81,6 +102,13 @@ $employeeID = $_SESSION['employee_id'];
             </a>
           </li>
 
+           <li class="nav-item">
+            <a class="nav-link" href="view_employee.php">
+              <i class="mdi mdi-account-circle menu-icon"></i>
+                <span class="menu-title">Employees</span>
+            </a>
+          </li>
+
            <li class="nav-item active">
             <a class="nav-link" href="view_renter.php">
               <i class="mdi mdi-houzz menu-icon"></i>
@@ -88,53 +116,28 @@ $employeeID = $_SESSION['employee_id'];
             </a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="view_billing.php">
-              <i class="mdi mdi-cash-multiple menu-icon"></i>
-                <span class="menu-title">Billings</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="view_agreement.php">
-              <i class="mdi mdi-newspaper menu-icon"></i>
-                <span class="menu-title">Agreement</span>
+           <li class="nav-item">
+            <a class="nav-link" href="view_report.php">
+              <i class="mdi mdi-note-text menu-icon"></i>
+                <span class="menu-title">Report</span>
             </a>
           </li>
 
            <li class="nav-item">
-            <a class="nav-link" href="view_employee.php">
-              <i class="mdi mdi-account-circle menu-icon"></i>
-                <span class="menu-title">Employee</span>
+            <a class="nav-link" href="view_transaction.php">
+               <i class="mdi mdi-cash-multiple menu-icon"></i>
+                <span class="menu-title">Transaction</span>
             </a>
           </li>
 
-            <li class="nav-item">
-            <a class="nav-link" href="view_branch.php">
-              <i class="mdi mdi-library-plus menu-icon"></i>
-                <span class="menu-title">Branch</span>
+           <li class="nav-item">
+            <a class="nav-link" href="view_complaints.php">
+               <i class="mdi mdi-newspaper menu-icon"></i>
+                <span class="menu-title">Complaints</span>
             </a>
           </li>
-         
-  
-         <!--   <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#report" aria-expanded="false" aria-controls="report">
-              <i class="mdi mdi-note-text menu-icon"></i>
-              <span class="menu-title">Report</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="report">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="view_tenant_report.html">Tenant Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_rental_report.html">Rental Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_complaint_report.html">Complaint Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_bill_report.html">Bill Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_unit_report.html">Unit Status Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_payment_report.html">Payment Report</a></li>
-              </ul>
-            </div>
-          </li> -->
 
+        </ul>
       </nav>
 
         <!-- partial -->

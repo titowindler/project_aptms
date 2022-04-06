@@ -64,10 +64,31 @@ $adminID = $_SESSION['admin_id'];
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
 
+          <li class="nav-item" style="pointer-events: none;">
+            <a class="nav-link">
+              <img src="../../images/faces/face10.jpg" alt="profile" style="width:30%;border-radius: 50%;margin:0 10px;padding:5px;">
+              <span class="nav-profile-name">Administrator</span>
+            </a>
+         
+          </li>
+
+          <li class="nav-item" style="pointer-events: none;">
+            <a class="nav-link">
+               <span class="menu-title" style="padding:0 50px;">Main Navigation</span>
+            </a>
+          </li>
+
           <li class="nav-item">
             <a class="nav-link" href="dashboard.php">
               <i class="mdi mdi-home menu-icon"></i>
               <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+
+           <li class="nav-item">
+            <a class="nav-link" href="view_branch.php">
+              <i class="mdi mdi-library-plus menu-icon"></i>
+                <span class="menu-title">Branch</span>
             </a>
           </li>
 
@@ -79,6 +100,13 @@ $adminID = $_SESSION['admin_id'];
           </li>
 
            <li class="nav-item">
+            <a class="nav-link" href="view_employee.php">
+              <i class="mdi mdi-account-circle menu-icon"></i>
+                <span class="menu-title">Employees</span>
+            </a>
+          </li>
+
+           <li class="nav-item">
             <a class="nav-link" href="view_renter.php">
               <i class="mdi mdi-houzz menu-icon"></i>
                 <span class="menu-title">Renters</span>
@@ -86,52 +114,27 @@ $adminID = $_SESSION['admin_id'];
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="view_billing.php">
-              <i class="mdi mdi-cash-multiple menu-icon"></i>
-                <span class="menu-title">Billings</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="view_agreement.php">
-              <i class="mdi mdi-newspaper menu-icon"></i>
-                <span class="menu-title">Agreement</span>
+            <a class="nav-link" href="view_report.php">
+              <i class="mdi mdi-note-text menu-icon"></i>
+                <span class="menu-title">Report</span>
             </a>
           </li>
 
            <li class="nav-item">
-            <a class="nav-link" href="view_employee.php">
-              <i class="mdi mdi-account-circle menu-icon"></i>
-                <span class="menu-title">Employee</span>
+            <a class="nav-link" href="view_transaction.php">
+               <i class="mdi mdi-cash-multiple menu-icon"></i>
+                <span class="menu-title">Transaction</span>
             </a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="view_branch.php">
-              <i class="mdi mdi-library-plus menu-icon"></i>
-                <span class="menu-title">Branch</span>
+           <li class="nav-item">
+            <a class="nav-link" href="view_complaints.php">
+               <i class="mdi mdi-newspaper menu-icon"></i>
+                <span class="menu-title">Complaints</span>
             </a>
           </li>
-         
-  
-        <!--    <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#report" aria-expanded="false" aria-controls="report">
-              <i class="mdi mdi-note-text menu-icon"></i>
-              <span class="menu-title">Report</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="report">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="view_tenant_report.html">Tenant Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_rental_report.html">Rental Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_complaint_report.html">Complaint Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_bill_report.html">Bill Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_unit_report.html">Unit Status Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_payment_report.html">Payment Report</a></li>
-              </ul>
-            </div>
-          </li> -->
 
+        </ul>
       </nav>
 
         <!-- partial -->
@@ -165,13 +168,14 @@ $adminID = $_SESSION['admin_id'];
                     <table id="viewUnitList" class="table">
                       <thead>
                         <tr>
-                            <th>Unit ID</th>
-                            <th>House Name</th>
-                            <th>Unit Type</th>
-                            <th>Location</th>
-                            <th>View Unit Details</th>
+                            <th>Branch Address</th>
+                            <th>Room Name</th>
+                            <th>Room No.</th>
+                            <th>Floor No.</th>
+                            <th>Unit Price</th>
                             <th>Occupied</th>
-                            <!-- <th>Options</th> -->
+                            <th>Status</th>
+                            <th>Options</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -180,6 +184,7 @@ $adminID = $_SESSION['admin_id'];
                           <td> <?php echo $row['unit_id']; ?> </td> 
                           <td> <?php echo $row['unit_name']; ?> </td>
                           <td> <?php echo $row['unit_type']; ?> </td>
+                          <td> <?php echo $row['unit_location']; ?> </td>
                           <td> <?php echo $row['unit_location']; ?> </td>
                           <td>
                             <button type="button" class="btn btn-success btn-sm">
@@ -195,12 +200,16 @@ $adminID = $_SESSION['admin_id'];
                           <i class="mdi mdi-account-remove"></i>   
                           </td>
                          <?php } ?>
-                         <!--  <td>
+                          <td>
                             <button type="button" class="btn btn-primary btn-sm">
-                            UPDATE </button>
+                            Vacant </button>
                             <button type="button" class="btn btn-danger btn-sm">
-                            DELETE </button>
-                          </td> -->
+                            Deactivate </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                            Edit Unit </button>
+                            <button type="button" class="btn btn-danger btn-sm">
+                            View Unit Photo </button>
+                          </td>
                         </tr>
                         <?php } ?>
                       </tbody>

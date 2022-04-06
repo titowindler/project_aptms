@@ -18,8 +18,6 @@ $result = mysqli_query($conn,$sql);
 // session id for this account
 $adminID = $_SESSION['admin_id'];
 
-
-
 ?>
 
   <div class="container-scroller">
@@ -66,10 +64,31 @@ $adminID = $_SESSION['admin_id'];
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
 
+          <li class="nav-item" style="pointer-events: none;">
+            <a class="nav-link">
+              <img src="../../images/faces/face10.jpg" alt="profile" style="width:30%;border-radius: 50%;margin:0 10px;padding:5px;">
+              <span class="nav-profile-name">Administrator</span>
+            </a>
+         
+          </li>
+
+          <li class="nav-item" style="pointer-events: none;">
+            <a class="nav-link">
+               <span class="menu-title" style="padding:0 50px;">Main Navigation</span>
+            </a>
+          </li>
+
           <li class="nav-item active">
             <a class="nav-link" href="dashboard.php">
               <i class="mdi mdi-home menu-icon"></i>
               <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+
+           <li class="nav-item">
+            <a class="nav-link" href="view_branch.php">
+              <i class="mdi mdi-library-plus menu-icon"></i>
+                <span class="menu-title">Branch</span>
             </a>
           </li>
 
@@ -81,59 +100,41 @@ $adminID = $_SESSION['admin_id'];
           </li>
 
            <li class="nav-item">
+            <a class="nav-link" href="view_employee.php">
+              <i class="mdi mdi-account-circle menu-icon"></i>
+                <span class="menu-title">Employees</span>
+            </a>
+          </li>
+
+           <li class="nav-item">
             <a class="nav-link" href="view_renter.php">
               <i class="mdi mdi-houzz menu-icon"></i>
                 <span class="menu-title">Renters</span>
             </a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="view_billing.php">
-              <i class="mdi mdi-cash-multiple menu-icon"></i>
-                <span class="menu-title">Billings</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="view_agreement.php">
-              <i class="mdi mdi-newspaper menu-icon"></i>
-                <span class="menu-title">Agreement</span>
+           <li class="nav-item">
+            <a class="nav-link" href="view_report.php">
+              <i class="mdi mdi-note-text menu-icon"></i>
+                <span class="menu-title">Report</span>
             </a>
           </li>
 
            <li class="nav-item">
-            <a class="nav-link" href="view_employee.php">
-              <i class="mdi mdi-account-circle menu-icon"></i>
-                <span class="menu-title">Employee</span>
+            <a class="nav-link" href="view_transaction.php">
+               <i class="mdi mdi-cash-multiple menu-icon"></i>
+                <span class="menu-title">Transaction</span>
             </a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="view_branch.php">
-              <i class="mdi mdi-library-plus menu-icon"></i>
-                <span class="menu-title">Branch</span>
+           <li class="nav-item">
+            <a class="nav-link" href="view_complaints.php">
+               <i class="mdi mdi-newspaper menu-icon"></i>
+                <span class="menu-title">Complaints</span>
             </a>
           </li>
-         
-  
-           <!-- <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#report" aria-expanded="false" aria-controls="report">
-              <i class="mdi mdi-note-text menu-icon"></i>
-              <span class="menu-title">Report</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="report">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="view_tenant_report.html">Tenant Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_rental_report.html">Rental Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_complaint_report.html">Complaint Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_bill_report.html">Bill Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_unit_report.html">Unit Status Report</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_payment_report.html">Payment Report</a></li>
-              </ul>
-            </div>
-          </li> -->
 
+        </ul>
       </nav>
       <!-- partial -->
       <div class="main-panel">
@@ -158,7 +159,7 @@ $adminID = $_SESSION['admin_id'];
                 <div class="card-body dashboard-tabs p-0">
                   <ul class="nav nav-tabs px-4" role="tablist">
                     <li class="nav-item">
-                      <a class="nav-link active" id="overview-tab" data-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
+                   <!--    <a class="nav-link" id="overview-tab" data-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true"></a> -->
                     </li>
                   </ul>
 
@@ -167,21 +168,40 @@ $adminID = $_SESSION['admin_id'];
                     <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
                       <div class="d-flex flex-wrap justify-content-xl-between">
 
-                        <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                          <i class="mdi mdi-houzz-box menu-icon mr-3 icon-lg text-danger"></i>
-                          <div class="d-flex flex-column justify-content-around">
-                            <small class="mb-1 text-muted">Total Number of Units</small>
+                        <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 mx-2 item bg-primary">
+                          <i class="mdi mdi-houzz menu-icon mr-3 icon-lg text-light"></i>
+                          <div class="d-flex flex-column justify-content-around text-light">
+                            <small class="mb-1 text-light">Renters</small>
                             <h5 class="mr-2 mb-0">8</h5>
                           </div>
                         </div>
 
-                        <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
-                          <i class="mdi mdi-houzz menu-icon mr-3 icon-lg text-success"></i>
-                          <div class="d-flex flex-column justify-content-around">
-                            <small class="mb-1 text-muted">Total Number of Renters</small>
+
+
+                        <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 mx-2 item bg-danger">
+                          <i class="mdi mdi-library-plus menu-icon mr-3 icon-lg text-light"></i>
+                          <div class="d-flex flex-column justify-content-around text-light">
+                            <small class="mb-1 text-light">Branch</small>
                             <h5 class="mr-2 mb-0">3</h5>
                           </div>
                         </div>
+
+                          <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 mx-2 item bg-success">
+                        <i class="mdi mdi-account-circle menu-icon mr-3 icon-lg text-light"></i>
+                          <div class="d-flex flex-column justify-content-around text-white">
+                            <small class="mb-1">Employees</small>
+                            <h5 class="mr-2 mb-0">3</h5>
+                          </div>
+                        </div>
+
+                           <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 mx-2 item bg-info text-light">
+                          <i class="mdi mdi-newspaper menu-icon mr-3 icon-lg text-light"></i>
+                          <div class="d-flex flex-column justify-content-around">
+                            <small class="mb-1 text-light">Pending Complaints</small>
+                            <h5 class="mr-2 mb-0">3</h5>
+                          </div>
+                        </div>
+
 
                       
                       </div>
@@ -193,6 +213,55 @@ $adminID = $_SESSION['admin_id'];
           </div>
 
           <div class="row">
+            <div class="col-md-12 stretch-card my-2">
+              <div class="card">
+                  <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                    <h4 class="card-title">Monthly Booking Report</h4>
+                    <canvas id="barChart" style="display: block; width: 758px; height: 379px;" width="1516" height="758" class="chartjs-render-monitor"></canvas>
+                  </div>
+                </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-title">Latest Complaints</p>
+                  <div class="table-responsive table-bordered">
+                    <table id="recent-purchases-listing1" class="table">
+                      <thead>
+                        <tr>
+                            <th>Branch</th>
+                            <th>Renter</th>
+                            <th>Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <td>Branch 1</td>
+                            <td>Juan Dela Cruz</td>
+                            <td>04/06/2021</td>
+                        </tr>
+                        <tr>
+                            <td>Branch 2</td>
+                            <td>Juan Dela Cruz</td>
+                            <td>04/06/2021</td>
+                        </tr>
+                         <tr>
+                            <td>Branch 3</td>
+                            <td>Juan Dela Cruz</td>
+                            <td>04/06/2021</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!--   <div class="row">
             <div class="col-md-6 stretch-card">
               <div class="card">
                 <div class="card-body">
@@ -247,7 +316,9 @@ $adminID = $_SESSION['admin_id'];
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
+
+
         </div>
 
         <!-- content-wrapper ends -->

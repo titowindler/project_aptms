@@ -18,5 +18,18 @@
   <!-- endinject -->
   <link rel="shortcut icon" href="../../images/monings-logo.png" />
   <link rel="stylesheet" href="../../vendors/hintcss/hint.css">
+
+
+  <style>
+    .form-control {
+      border: 1px solid #9d9c9c;
+    }
+
+    select.form-control {
+      border: 1px solid #9d9c9c;
+    }
+
+  </style>
+
 </head>
 <body>

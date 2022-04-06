@@ -11,6 +11,12 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link type="text/css" rel="stylesheet" href="assets/lightgallery/dist/css/lightgallery.css" /> 
+    <link type="text/css" rel="stylesheet" href="assets/lightgallery/dist/css/lg-fb-comment-box.css" />
+    <link type="text/css" rel="stylesheet" href="assets/lightgallery/dist/css/lg-transitions.css" />
+
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.css">
  
     <link rel="stylesheet" href="css/animate.css">
     
@@ -72,6 +78,15 @@
       </div>
     </div>
 
+   <!--        <div id="animated-thumbnials">
+        <a href="images/image_1.jpg">
+            <img src="images/image_1.jpg" />
+        </a>
+        <a href="images/image_2.jpg">
+            <img src="images/image_1.jpg" />
+        </a>
+      </div>
+ -->
    
   <!--   <section class="ftco-section ftco-services">
     	<div class="container">
@@ -114,15 +129,18 @@
 			<div class="container-fluid px-md-0">
 				<div class="row no-gutters justify-content-center pb-5 mb-3">
           <div class="col-md-7 heading-section text-center">
-            <h2>Apartment Room</h2>
+            <h2>Availability</h2>
           </div>
+              <!--   <div class="container text-center"> 
+                  <a href="blog-single.php"><button href="btn btn-primary" style="padding:15px;border:1px solid black">See More</button></a>
+                 </div> -->
         </div>
 
       <div class="container">
         <div class="row d-flex">
           <div class="col-md-4 d-flex">
             <div class="blog-entry align-self-stretch">
-              <a href="blog-single.php" class="block-20 rounded" style="background-image: url('images/image_1.jpg');">
+              <a href="preview_room.php" class="block-20 rounded" style="background-image: url('images/image_1.jpg');">
               </a>
               <div class="text p-4 text-center">
                 <h3 class="heading"><a href="#">Work Hard, Party Hard in a Luxury Chalet in the Alps</a></h3>
@@ -137,7 +155,7 @@
           </div>
           <div class="col-md-4 d-flex">
             <div class="blog-entry align-self-stretch">
-              <a href="blog-single.php" class="block-20 rounded" style="background-image: url('images/image_2.jpg');">
+              <a href="preview_room.php" class="block-20 rounded" style="background-image: url('images/image_2.jpg');">
               </a>
               <div class="text p-4 text-center">
                 <h3 class="heading"><a href="#">Work Hard, Party Hard in a Luxury Chalet in the Alps</a></h3>
@@ -152,7 +170,7 @@
           </div>
           <div class="col-md-4 d-flex">
             <div class="blog-entry align-self-stretch">
-              <a href="blog-single.php" class="block-20 rounded" style="background-image: url('images/image_3.jpg');">
+              <a href="preview_room.php" class="block-20 rounded" style="background-image: url('images/image_3.jpg');">
               </a>
               <div class="text p-4 text-center">
                 <h3 class="heading"><a href="#">Work Hard, Party Hard in a Luxury Chalet in the Alps</a></h3>
@@ -167,8 +185,7 @@
           </div>
         </div>
       </div>
-		
-			</div>
+		</div>
 		</section>
 
 		
@@ -241,6 +258,21 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- lightgallery-->
+  <script src="assets/lightgallery/dist/js/lightgallery.min.js"></script>
+
+  <!-- lightgallery plugins -->
+  <script src="assets/lightgallery/dist/js/lg-thumbnail.min.js"></script>
+  <script src="assets/lightgallery/dist/js/lg-fullscreen.min.js"></script>
+
+  <script>
+    lightGallery(document.getElementById('animated-thumbnials'), {
+    thumbnail:true,
+    animateThumb: false,
+    showThumbByDefault: false
+});
+  </script>
 
   </body>
 </html>

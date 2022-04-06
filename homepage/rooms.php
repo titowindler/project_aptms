@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
- 
+ 	
+ 	 <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.css">
  
     <link rel="stylesheet" href="css/animate.css">
     
